@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form action="" method="POST">
+        IP to ping: <input type="text" name="command"><br>
+        <input type="submit" value="Ping!">
+    </form>
+    
+    {% if result %}
+    <div id="result" class="center">
+	    {% if image %}
+	    <img src="{{ url_for('static', filename=image) }}" width="300" height="400">
+		{% endif %}
+        <pre>{{ result }}</pre>
+    </div>
+    {% endif %}
+</body>
+</html>
