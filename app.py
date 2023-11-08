@@ -17,7 +17,7 @@ def index():
         command = "ping "+request.form.get('command')
         result = subprocess.getoutput(command)
       else:
-        image = "no.jpg"
+        image = "no.png"
         result = "...."
     return render_template('command.html', result=result,image=image)
 
